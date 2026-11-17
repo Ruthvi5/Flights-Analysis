@@ -1,0 +1,18 @@
+# Flights-Analysis: Python dependencies
+# Tested with Python 3.13 (Python 3.10 or newer should work).
+# Install with:  pip install -r requirements.txt
+
+# Streamlit dashboard (1.py and pages/asso.py)
+streamlit>=1.40,<2
+pandas>=2.2,<3            # pandas 3 breaks combined.ipynb (city index name changes)
+numpy>=2.1
+plotly>=5.24
+scikit-learn>=1.5
+networkx>=3.4
+statsmodels>=0.14.5       # needed by the OLS trendline in the EDA tab; 0.14.4 and older fail with recent SciPy
+
+# Notebooks
+matplotlib>=3.8,<3.11     # 3.11 removed boxplot(labels=...), used in flight_delay_analysis.ipynb
+seaborn>=0.13
+mlxtend>=0.23             # Apriori in flight_delay_analysis.ipynb
+notebook>=7               # or use JupyterLab / VS Code to open the .ipynb files
